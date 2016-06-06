@@ -28,3 +28,13 @@ class UserRegistrationView(AnonymousRequiredMixin, FormView):
             response = func(request, *args, **kwargs)
             return response
         return as_view
+
+
+class AddChocolateView(FormView):
+   template_name = "add_chocolate.html"
+   form_class = ChocolateAddForm
+   success_url = '/registration/chocolate/success'
+
+   def form_valid(self, form):
+       form.save()
+       return FormView.form_valid(self, form)
