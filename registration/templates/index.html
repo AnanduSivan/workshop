@@ -10,7 +10,8 @@
     <script type="text/javascript" src="{%  static 'js/bootstrap.min.js' %}"></script>
 
 </head>
-<body style="background-image: url({% static "images/joker.jpg" %});background-repeat:no-repeat;background-size:100%;height: 140px;display:block;padding:0 !important;margin:0;";">
+
+<body style="background-image: url({% static "images/joker.jpg" %});background-repeat:no-repeat;background-size:100%;height: 140px;display:block;padding:0 !important;margin:0;">
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -68,6 +69,28 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+<div class=table-responsive">
+<div class="col-xs-12 col-sm-6 col-md-8 col-md-offset-2 well">
+<div class="panel panel-primary">
+<table class="table table-hover table-bordered table-responsive">
+    <tr style="font-size: 20px" class="danger">
+        <th >Name</th>
+        <th>Description</th>
+        <th>Manufacturer</th>
+        <th>Price</th>
+    </tr>
+    {% for item in object_list %}
+    <tr style="font-size: 15px" class="info">
+     <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.manufacturer}}</td>
+        <td>{{item.price}}</td>
+    </tr>
+     {% endfor %}
+</table>
+</div>
+    </div>
+    </div>
 {%if user.anonymous%}
 (Nothiong here)
 {% else %}
