@@ -1,9 +1,9 @@
 from django.db import models
-
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.utils.translation import ugettext_lazy as _
 from django.core.validators import RegexValidator, MaxValueValidator, MinValueValidator
+#from mail_templated import send_mail
 
 # Create your models here.
 GENDER = (('M', _('Male')), ('F', _('Female')))

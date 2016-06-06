@@ -17,7 +17,7 @@
 <div class="panel-heading" ><b>Sign In</b></div>
 <div class="panel-body">
         <form class="form-horizontal well" id="registerForm" method="POST"
-          					enctype="multipart/form-data" action="{% url 'user_signup' %}">
+          					enctype="multipart/form-data" action="">
           					<fieldset>
           							{% csrf_token %} {% load tz %}
           							{% for field in form.visible_fields %}

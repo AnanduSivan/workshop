@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'hyxe!sq4(u89s0_3l95_!2_tv!@lp8s)h9vt%=d51woyz**ovp'
+SECRET_KEY = '9c5w2^thqo4nwnmb=(b6sg4d)5!fp+qui9uc37tg+_r@w(aw_6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +37,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'registration'
-
 )
 
 MIDDLEWARE_CLASSES = (
@@ -86,4 +85,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = '/media/'
 STATICFILES_DIRS = (MEDIA_ROOT,)
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
-LOGIN_REDIRECT_URL='home'
+LOGIN_REDIRECT_URL = 'home'
+
+AUTH_USER_MODEL = "registration.User"
